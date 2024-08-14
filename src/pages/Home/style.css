@@ -1,0 +1,51 @@
+.home{
+  background-image: url('../Home/amazon-rain.png');
+  background-size: cover; /* Faz a imagem cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Não repete a imagem */
+  width: 100%;
+  height: 100vh;
+}
+
+
+.custom-menu {
+    background: transparent !important; /* Fundo transparente */
+    color: white !important; /* Fonte branca */
+    justify-content: flex-end; /* Alinha os itens à direita */
+
+  }
+  
+  .custom-menu .ant-menu-item {
+    color: white !important; /* Fonte branca */
+  }
+  
+  .custom-menu .ant-menu-item:hover,
+  .custom-menu .ant-menu-item-active,
+  .custom-menu .ant-menu-item-selected {
+    border-bottom: 2px solid orange !important; /* Underline laranja ao dar overflow */
+    background: transparent !important; /* Remove o fundo azul ao clicar */
+
+  }
+  
+  .custom-menu .ant-menu-item::after {
+    display: none !important; /* Remove o underline padrão */
+  }
+
+  .title {
+    color: white; /* Cor branca */
+    font-size: 3rem; /* Tamanho grande */
+    font-weight: bold; /* Negrito */
+    margin-bottom: 2rem; /* Espaço abaixo do título */
+  }
+
+
+  .card {
+    background: rgba(255, 255, 255, 0.8); /* Fundo translúcido */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 600px; /* Largura máxima */
+    text-align: left; /* Alinhamento do texto */
+    color: black; /* Cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 2rem; /* Espaço acima do card */
+  }
