@@ -1,51 +1,202 @@
 .home{
     transition: background-image 1s ease-in-out;
-  background-size: cover; /* Faz a imagem cobrir todo o fundo */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Não repete a imagem */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   width: 100%;
   height: 100vh;
 }
 
+.participants-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    color: white;
+}
+
+.participant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.participant-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.participant-info {
+    max-width: 200px;
+}
+
+.participant-name {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.participant-role {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.participant-description {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 
 .custom-menu {
-    background: transparent !important; /* Fundo transparente */
-    color: white !important; /* Fonte branca */
-    justify-content: flex-end; /* Alinha os itens à direita */
+    background: transparent !important; 
+    color: white !important; 
+    justify-content: flex-end; 
 
   }
   
   .custom-menu .ant-menu-item {
-    color: white !important; /* Fonte branca */
+    color: white !important; 
   }
   
   .custom-menu .ant-menu-item:hover,
   .custom-menu .ant-menu-item-active,
   .custom-menu .ant-menu-item-selected {
-    border-bottom: 2px solid orange !important; /* Underline laranja ao dar overflow */
-    background: transparent !important; /* Remove o fundo azul ao clicar */
-
+    border-bottom: 2px solid orange !important; 
+    background: transparent !important; 
   }
   
   .custom-menu .ant-menu-item::after {
-    display: none !important; /* Remove o underline padrão */
+    display: none !important; 
   }
 
   .title {
-    color: white; /* Cor branca */
-    font-size: 3rem; /* Tamanho grande */
-    font-weight: bold; /* Negrito */
-    margin-bottom: 2rem; /* Espaço abaixo do título */
+    color: white; 
+    font-size: 3rem; 
+    font-weight: bold; 
+    margin-bottom: 2rem; 
+    align-self: flex-start;
+    margin-bottom: 20px;
   }
 
 
   .card {
-    background: rgba(255, 255, 255, 0.8); /* Fundo translúcido */
-    padding: 2rem; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    max-width: 600px; /* Largura máxima */
-    text-align: left; /* Alinhamento do texto */
-    color: black; /* Cor do texto */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    margin-top: 2rem; /* Espaço acima do card */
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 2rem; 
+    border-radius: 10px; 
+    max-width: 600px; 
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-top: 2rem; 
+    
   }
+
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        
+}
+
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.timeline-year {
+    margin-bottom: 10px;
+}
+
+.timeline-point {
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-achievement {
+    text-align: center;
+    max-width: 100px;
+}
+
+/* .timeline::before {
+    content: '';
+    position: absolute;
+    margin: 5px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+    z-index: 0;
+} */
+
+/* .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-bottom:2%;
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    z-index: 0;
+} */
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-item {
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .timeline::before {
+        top: auto;
+        bottom: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+    }
+
+    .timeline-item::before {
+        top: auto;
+        bottom: 0;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+    }
+
+
+
+
+    
+};
+
+

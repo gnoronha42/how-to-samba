@@ -13,4 +13,8 @@ export {default as IMG_6457} from './inhotim/IMG_6457.jpg';
 export {default as IMG_6624} from './inhotim/IMG_6624.jpg';
 export {default as IMG_6646} from './inhotim/IMG_6646.jpg';
 export {default as IMG_6649} from './inhotim/IMG_6649.jpg';
+export {default as maria} from './maria-foto.png';
+export {default as mari} from './mari-foto.png';
+export {default as gabriel} from './gabriel-foto.png';
+
 
