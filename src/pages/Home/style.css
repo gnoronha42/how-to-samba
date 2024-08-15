@@ -1,5 +1,5 @@
 .home{
-  background-image: url('../Home/amazon-rain.png');
+    transition: background-image 1s ease-in-out;
   background-size: cover; /* Faz a imagem cobrir todo o fundo */
   background-position: center; /* Centraliza a imagem */
   background-repeat: no-repeat; /* Não repete a imagem */
