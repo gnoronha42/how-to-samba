@@ -1,5 +1,5 @@
 import { Menu, Dropdown, Button } from 'antd';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaFlagUsa, FaFlag } from 'react-icons/fa'
 import './style.css';
@@ -19,10 +19,19 @@ import {
     IMG_6624,
     IMG_6646,
     IMG_6649,
+    caio,
+    cris,
     gabriel,
+    gisele,
+    grandstand,
+    grandstandBlue,
+    grandstandYellow,
     mari,
     maria,
 } from '../../assets/';
+import Draggable from 'react-draggable';
+import { Bubble } from '../../components/Bubble';
+
 
 const Home = () => {
     const { t, i18n } = useTranslation();
@@ -99,7 +108,7 @@ const Home = () => {
         {
             name: 'Maria Eduarda',
             role: 'Community Manager',
-            description: 'na How to Samba, organizando os criativos e otimizando a gestão de recursos.',
+            description: 'Na Howto Samba, organizando os criativos e otimizando a gestão de recursos.',
             image: maria, 
         },
         {
@@ -111,10 +120,30 @@ const Home = () => {
         {
             name: 'Gabriel Ximenes',
             role: 'Guest Developer',
-            description: 'Desenvolvedor Fullstack com experiencia em varios projetos.',
+            description: 'Desenvolvedor Fullstack com experiência em vários projetos.',
             image: gabriel, 
         },
+        {
+            name: 'Caio Palmieri',
+            role: 'Consultor',
+            description: 'Consultor em projetos alinhados a seus valores, com experiência em eventos, investimentos, fusões e aquisições.',
+            image: caio, 
+        },
+        {
+            name: 'Gisele Jabur',
+            role: 'Advogada e Pesquisadora',
+            description: 'Defensora dos povos originários sul-americanos, doutoranda em direito socioambiental.',
+            image: gisele, 
+        },
+        {
+            name: 'Cris',
+            role: 'Tradutor e Intérprete',
+            description: 'Tradutor e intérprete há mais de 20 anos, ativista e homologado pela Associação Brasileira de Arqueria.',
+            image: cris , 
+        },
     ];
+    const nodeRef = useRef(null);
+
 
     return (
         <div className="home" style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -159,6 +188,11 @@ const Home = () => {
                     </div>
                 ))}
             </div>
+
+
+           
+
+          
         </div>
     );
 }

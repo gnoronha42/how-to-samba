@@ -15,6 +15,12 @@ export {default as IMG_6646} from './inhotim/IMG_6646.jpg';
 export {default as IMG_6649} from './inhotim/IMG_6649.jpg';
 export {default as maria} from './maria-foto.png';
 export {default as mari} from './mari-foto.png';
+export {default as cris} from './cris-foto.png';
+export {default as caio} from './caio-foto.png';
+export {default as gisele} from './gisele-foto.png';
 export {default as gabriel} from './gabriel-foto.png';
+export {default as grandstand} from './grandstand.svg';
+export {default as grandstandBlue} from './grandstand-blue.svg';
+export {default as grandstandYellow} from './grandstand-yellow.svg';
 
 
