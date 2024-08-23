@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.page-container {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  min-height: calc(100vh - 64px); /* Ajuste conforme a altura do seu Header */
+}
+
+.form-wrapper {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  padding: 2rem;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  /* width: 100%; */
+  /* max-width: 400px; */
+  text-align: center;
+}
+
+.title {
+  color: white;
+  width: 100%;
+  font-size: 4rem; /* Aumente conforme necessário */
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: white;
+  font-size: 2rem; /* Aumente conforme necessário */
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/* Estilos adicionais para melhorar a aparência dos componentes Ant Design */
+.ant-form-item-label > label {
+  color: #333;
+}
+
+.ant-input-affix-wrapper {
+  border-radius: 4px;
+}
+
+.ant-btn-primary {
+  height: 40px;
+  font-size: 16px;
+}

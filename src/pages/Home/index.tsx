@@ -1,7 +1,8 @@
+import React, { useEffect, useState } from 'react';
 import { Menu, Dropdown, Button } from 'antd';
-import React, { useEffect, useRef, useState } from 'react';
+import { participants } from './mockData';
 import { useTranslation } from 'react-i18next';
-import { FaFlagUsa, FaFlag } from 'react-icons/fa'
+import { FaFlagUsa, FaFlag } from 'react-icons/fa';
 import './style.css';
 import {
     IMG_6066,
@@ -19,17 +20,9 @@ import {
     IMG_6624,
     IMG_6646,
     IMG_6649,
-    caio,
-    cris,
-    gabriel,
-    gisele,
-    grandstand,
-    grandstandBlue,
-    grandstandYellow,
-    mari,
-    maria,
 } from '../../assets/';
-import Draggable from 'react-draggable';
+import { Link } from 'react-router-dom';
+// import NavBar from '../../components/navBar';
 import { Bubble } from '../../components/Bubble';
 
 
@@ -54,42 +47,15 @@ const Home = () => {
     ];
     const [backgroundImage, setBackgroundImage] = useState(images[0]);
 
-    const languageMenu = (
-              <Menu>
-            <Menu.Item key="en" onClick={() => changeLanguage('en')}>
-                <FaFlagUsa style={{ marginRight: 8 }} /> English
-            </Menu.Item>
-            <Menu.Item key="pt" onClick={() => changeLanguage('pt')}>
-                <FaFlag style={{ marginRight: 8 }} /> Português
-            </Menu.Item>
-        </Menu>
-    );
 
 
-    const items = [
-        { key: '1', label: t('why_we_do') },
-        { key: '2', label: t('the_things_we_do') },
-        { key: '3', label: t('about_us') },
-        { key: '4', label: <Dropdown overlay={languageMenu}  className="language-switch">
-        <Button>{t('language')}</Button>
-    </Dropdown>}
-    ];
 
     useEffect(() => {
         const randomImage = images[Math.floor(Math.random() * images.length)];
         setBackgroundImage(randomImage);
     }, []);
 
-    const handleMenuClick = () => {
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-        setBackgroundImage(randomImage);
-    };
-
   
-
-    const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng);
-    };
 
 
     const years = [
@@ -104,81 +70,32 @@ const Home = () => {
         { year: 2024, achievement: t('future_goals_and_plans') },
     ];
 
-    const participants = [
-        {
-            name: 'Maria Eduarda',
-            role: 'Community Manager',
-            description: 'Na Howto Samba, organizando os criativos e otimizando a gestão de recursos.',
-            image: maria, 
-        },
-        {
-            name: 'Mariana Franco',
-            role: 'CEO',
-            description: 'Sua visão globalista e domínio permite que ela atue como intérprete de conferências e facilitadora em distintos mercados.',
-            image: mari, 
-        },
-        {
-            name: 'Gabriel Ximenes',
-            role: 'Guest Developer',
-            description: 'Desenvolvedor Fullstack com experiência em vários projetos.',
-            image: gabriel, 
-        },
-        {
-            name: 'Caio Palmieri',
-            role: 'Consultor',
-            description: 'Consultor em projetos alinhados a seus valores, com experiência em eventos, investimentos, fusões e aquisições.',
-            image: caio, 
-        },
-        {
-            name: 'Gisele Jabur',
-            role: 'Advogada e Pesquisadora',
-            description: 'Defensora dos povos originários sul-americanos, doutoranda em direito socioambiental.',
-            image: gisele, 
-        },
-        {
-            name: 'Cris',
-            role: 'Tradutor e Intérprete',
-            description: 'Tradutor e intérprete há mais de 20 anos, ativista e homologado pela Associação Brasileira de Arqueria.',
-            image: cris , 
-        },
-    ];
-    const nodeRef = useRef(null);
-
-
     return (
         <div className="home" style={{ backgroundImage: `url(${backgroundImage})` }}>
-            <Menu
-                theme="dark"
-                mode="horizontal"
-                className='custom-menu'
-                defaultSelectedKeys={['2']}
-                items={items}
-                style={{ flex: 1, minWidth: 0 }}
-                onClick={handleMenuClick}
-            />
-          
+            {/* <NavBar /> */}
 
-            <h1 className="title">{t('how_to_samba')}</h1> 
+
+            <h1 className="title">{t('how_to_samba')}</h1>
             <div className="cards-container">
-                <div className="card" >
+                <div className="card">
                     <p>{t('brazil_abundant_resources')}</p>
                     <p>{t('brazil_culture_miscellaneous')}</p>
                 </div>
             </div>
 
-            <div className="timeline">
+            {/* <div className="timeline">
                 {years.map((item, index) => (
-                    <div key={index} className="timeline-item" >
+                    <div key={index} className="timeline-item">
                         <div className="timeline-year">{item.year}</div>
                         <div className="timeline-point"></div>
                         <div className="timeline-achievement">{item.achievement}</div>
                     </div>
                 ))}
-            </div>
+            </div> */}
 
             <div className="participants-container">
                 {participants.map((participant, index) => (
-                    <div key={index} className="participant" >
+                    <div key={index} className="participant">
                         <img src={participant.image} alt={participant.name} className="participant-image" />
                         <div className="participant-info">
                             <h3 className="participant-name">{participant.name}</h3>
@@ -189,10 +106,7 @@ const Home = () => {
                 ))}
             </div>
 
-
-           
-
-          
+         <Bubble/>
         </div>
     );
 }

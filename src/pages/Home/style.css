@@ -54,26 +54,7 @@
     margin: 0;
 }
 
-.custom-menu {
-    background: transparent !important; 
-    color: white !important; 
-    justify-content: flex-end; 
-}
 
-.custom-menu .ant-menu-item {
-    color: white !important; 
-}
-
-.custom-menu .ant-menu-item:hover,
-.custom-menu .ant-menu-item-active,
-.custom-menu .ant-menu-item-selected {
-    border-bottom: 2px solid orange !important; 
-    background: transparent !important; 
-}
-
-.custom-menu .ant-menu-item::after {
-    display: none !important; 
-}
 
 .title {
     color: white; 
@@ -216,7 +197,7 @@
 
     .card {
         padding: 0.5rem;
-    }
+    }   
 }
 
 

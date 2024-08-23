@@ -17,7 +17,6 @@
   border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
   opacity: 0.8;
   animation: breathe 2s ease-in-out infinite;
-   /* border: 2px solid #3d93ff; */
 }
 
 .Piece::before {
