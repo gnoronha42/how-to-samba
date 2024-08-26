@@ -19,8 +19,18 @@ const NewMembersForm: React.FC = () => {
       date: currentDate,
     };
   
+    // Check for duplicate keys
+    const keys = Object.keys(dataToSend);
+    const uniqueKeys = new Set(keys);
+    if (keys.length !== uniqueKeys.size) {
+      console.error('Duplicate keys found in dataToSend:', dataToSend);
+      return;
+    }
+  
+    console.log('Data to send:', dataToSend);
+  
     try {
-      const response = await fetch('https://sheet.best/api/sheets/68358f37-888a-4666-8b25-ef6feb367123', {
+      const response = await fetch('https://sheet.best/api/sheets/bb3d98f0-83b6-4bc3-ba5b-72b9d60f04fc', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
