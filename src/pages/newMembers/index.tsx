@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Form, Input, Button } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
+import { MailOutlined, UserOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
 
 import moment from 'moment';
@@ -12,14 +12,31 @@ const NewMembersForm: React.FC = () => {
   const { backgroundImage } = useBackgroundImage();
   const [form] = Form.useForm();
 
-  const onFinish = (values: any) => {
+  const onFinish = async (values: any) => {
     const currentDate = moment().format('YYYY-MM-DD');
     const dataToSend = {
       ...values,
       date: currentDate,
     };
-
-    console.log('Received values:', dataToSend);
+  
+    try {
+      const response = await fetch('https://sheet.best/api/sheets/68358f37-888a-4666-8b25-ef6feb367123', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend),
+      });
+  
+      if (response.ok) {
+        console.log('Dados enviados com sucesso:', dataToSend);
+      } else {
+        console.error('Erro ao enviar dados:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Erro ao enviar dados:', error);
+    }
+  
     form.resetFields();
   };
 
@@ -28,11 +45,14 @@ const NewMembersForm: React.FC = () => {
     
       <div className="content-container">
         <div className="form-wrapper">
-          <h1 className="title">How to Samba</h1>
-          <p className="subtitle">coming soon...</p>
+          <h1 className="title">How to Samba ? </h1>
+          <p className="subtitle">Act Local,Think Global</p>
+
+
           <Form
             form={form}
             name="new_member"
+            style={{marginTop:"75%"}}
             onFinish={onFinish}
             layout="vertical"
           >
@@ -46,9 +66,11 @@ const NewMembersForm: React.FC = () => {
               <Input prefix={<UserOutlined />} placeholder={t('email')} />
             </Form.Item>
             <Form.Item>
-              <Button type="primary"style={{backgroundColor:"orange", color:"white"}} htmlType="submit" block>
-                {t('register')}
-              </Button>
+             <div className="losango"  onClick={()=>{
+              onFinish(form.getFieldsValue())
+             }} data-text={t('register')}>
+             <MailOutlined style={{fontSize:"40px",rotate:"45deg",margin:"15px"}}  />
+              </div>
             </Form.Item>
           </Form>
         </div>

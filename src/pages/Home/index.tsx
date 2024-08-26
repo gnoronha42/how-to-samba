@@ -22,10 +22,7 @@ import {
     IMG_6649,
 } from '../../assets/';
 import { Link } from 'react-router-dom';
-// import NavBar from '../../components/navBar';
 import { Bubble } from '../../components/Bubble';
-
-
 const Home = () => {
     const { t, i18n } = useTranslation();
     const images = [
@@ -106,7 +103,6 @@ const Home = () => {
                 ))}
             </div>
 
-         <Bubble/>
         </div>
     );
 }

@@ -7,7 +7,6 @@ import NewMembersForm from '../pages/newMembers';
 const AppRoutes = () => {
   return (
     <Routes>
-      {/* Change routes  */}
       <Route path="/new-members" element={<Home />} /> 
       <Route path="/" element={<NewMembersForm />} />
     </Routes>
