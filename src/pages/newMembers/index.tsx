@@ -76,7 +76,6 @@ const NewMembersForm: React.FC = () => {
           <h1 className="title">How to Samba ? </h1>
           <p className="subtitle">Act Local, Think Global</p>
 
-          <p style={{ fontSize: '30px',backgroundColor:"white",width:"60%",justifyContent:"center",alignItems:"center",display:"flex",borderRadius:"10px",margin:"auto"}}>Coming Soon...</p>
 
           <Form
             form={form}
