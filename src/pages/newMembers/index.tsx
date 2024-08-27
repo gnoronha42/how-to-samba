@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Form, Input, Button } from 'antd';
 import { MailOutlined, UserOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import moment from 'moment';
 import './style.css';
@@ -13,6 +15,7 @@ const NewMembersForm: React.FC = () => {
   const [form] = Form.useForm();
 
   const onFinish = async (values: any) => {
+    
     const currentDate = moment().format('YYYY-MM-DD');
     const dataToSend = {
       ...values,
@@ -49,29 +52,33 @@ const NewMembersForm: React.FC = () => {
 
         if (emailResponse.ok) {
           console.log('Email enviado com sucesso');
+          toast.success('Cadastro realizado com sucesso! Por favor, verifique sua caixa de entrada.');
         } else {
           console.error('Erro ao enviar email:', emailResponse.statusText);
+          toast.error('Erro ao enviar email. Por favor, tente novamente.');
         }
       } else {
         console.error('Erro ao enviar dados:', response.statusText);
+        toast.error('Erro ao enviar dados. Por favor, tente novamente.');
       }
     } catch (error) {
       console.error('Erro ao enviar dados:', error);
+      toast.error('Erro ao enviar dados. Por favor, tente novamente.');
     }
 
     form.resetFields();
   };
+
   return (
     <div className="page-container" style={{backgroundImage: `url(${backgroundImage})`}}>
-    
       <div className="content-container">
         <div className="form-wrapper">
           <h1 className="title">How to Samba ? </h1>
-          <p className="subtitle">Act Local,Think Global</p>
+          <p className="subtitle">Act Local, Think Global</p>
 
           <p style={{ fontSize: '30px',backgroundColor:"white",width:"60%",justifyContent:"center",alignItems:"center",display:"flex",borderRadius:"10px",margin:"auto"}}>Coming Soon...</p>
 
-           <Form
+          <Form
             form={form}
             name="new_member"
             style={{marginTop:"75%"}}
@@ -88,15 +95,26 @@ const NewMembersForm: React.FC = () => {
               <Input prefix={<UserOutlined />} placeholder={t('email')} />
             </Form.Item>
             <Form.Item>
-             <div className="losango"  onClick={()=>{
+             <button className="losango"  type='submit'  onClick={()=>{
               onFinish(form.getFieldsValue())
              }} data-text={t('register')}>
-             <MailOutlined style={{fontSize:"30px",rotate:"45deg",margin:"15px"}}  />
-              </div>
+             <MailOutlined style={{fontSize:"30px",rotate:"45deg",margin:"5px"}}  />
+              </button>
             </Form.Item>
           </Form>
         </div>
       </div>
+      <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };
