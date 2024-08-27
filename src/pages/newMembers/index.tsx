@@ -85,6 +85,9 @@ const NewMembersForm: React.FC = () => {
             onFinish={onFinish}
             layout="vertical"
           >
+             <p style={{ fontSize: '20px', fontStyle: 'italic', marginBottom: '5px',color:"white" }}>
+            share your email to know more
+          </p>
             <Form.Item
               name="Email"
               rules={[
