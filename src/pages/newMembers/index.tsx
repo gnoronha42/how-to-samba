@@ -18,7 +18,6 @@ const NewMembersForm: React.FC = () => {
       ...values,
       date: currentDate,
     };
-
     
     const keys = Object.keys(dataToSend);
     const uniqueKeys = new Set(keys);
@@ -26,7 +25,6 @@ const NewMembersForm: React.FC = () => {
       console.error('Duplicate keys found in dataToSend:', dataToSend);
       return;
     }
-
     console.log('Data to send:', dataToSend);
 
     try {
@@ -71,8 +69,9 @@ const NewMembersForm: React.FC = () => {
           <h1 className="title">How to Samba ? </h1>
           <p className="subtitle">Act Local,Think Global</p>
 
+          <p style={{ fontSize: '30px',backgroundColor:"white",width:"60%",justifyContent:"center",alignItems:"center",display:"flex",borderRadius:"10px",margin:"auto"}}>Coming Soon...</p>
 
-          <Form
+           <Form
             form={form}
             name="new_member"
             style={{marginTop:"75%"}}
@@ -92,7 +91,7 @@ const NewMembersForm: React.FC = () => {
              <div className="losango"  onClick={()=>{
               onFinish(form.getFieldsValue())
              }} data-text={t('register')}>
-             <MailOutlined style={{fontSize:"40px",rotate:"45deg",margin:"15px"}}  />
+             <MailOutlined style={{fontSize:"30px",rotate:"45deg",margin:"15px"}}  />
               </div>
             </Form.Item>
           </Form>
