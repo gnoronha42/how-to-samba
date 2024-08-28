@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .home {
     transition: background-image 1s ease-in-out;
     background-size: cover; 
@@ -211,4 +215,94 @@
 .svg-container img {
     width: 300px; /* Ajuste o tamanho conforme necessário */
     height: auto;
+}
+
+
+/* Estilos gerais para as seções */
+section {
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #E1E0DC; /* Cor de fundo branca para o efeito de card */
+    border-radius: 8px; /* Bordas arredondadas para o card */
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.1); /* Sombra suave para dar profundidade ao card */
+    position: relative; /* Para posicionar o título de forma absoluta */
+    text-align: left; /* Alinha todo o conteúdo da seção à esquerda */
+   
+    
+}
+
+
+section h2 {
+    font-size: 28px;
+    color: #070606;
+    margin: 0;
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+}
+
+
+section p {
+    font-size: 16px;
+    color: #030303;
+    line-height: 1.6;
+    margin-top: 60px; 
+}
+
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: orange; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 18%;
+    text-align: center; /* Centraliza o texto dentro do botão */
+    margin-left: auto; /* Para centralizar horizontalmente */
+    margin-right: auto; /* Para centralizar horizontalmente */
+    display: block; /* Faz o botão se comportar como um bloco para que o margin auto funcione */
+}
+
+
+.cta-button:hover {
+    background-color: black; 
+}
+
+
+
+
+.participants-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.social-icons a {
+    color: #333; /* Cor dos ícones */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #022E4A; /* Cor dos ícones ao passar o mouse */
+}
+
+.contact-email {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #333;
 }
