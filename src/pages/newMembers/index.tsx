@@ -116,7 +116,7 @@ const NewMembersForm: React.FC = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+      />\
     </div>
   );
 };

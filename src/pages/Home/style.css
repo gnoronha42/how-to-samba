@@ -223,7 +223,7 @@ section {
     padding: 50px 20px;
     margin: 20px auto;
     max-width: 900px;
-    background-color: #E1E0DC; /* Cor de fundo branca para o efeito de card */
+    background-color: rgba(225, 224, 220, 0.8); /* Cor de fundo branca para o efeito de card */
     border-radius: 8px; /* Bordas arredondadas para o card */
     box-shadow: 0 4px 8px rgba(8, 8, 8, 0.1); /* Sombra suave para dar profundidade ao card */
     position: relative; /* Para posicionar o título de forma absoluta */
