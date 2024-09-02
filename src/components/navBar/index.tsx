@@ -26,8 +26,8 @@ const NavBar: React.FC = () => {
     const items = [
         { key: '1', label: <a href="#why-we-do">{t('why_we_do')}</a> },
         { key: '2', label: <a href="#things-we-do">{t('the_things_we_do')}</a> },
-        { key: '3', label: <a href="#about-us">{t('about_us')}</a> },
-        { key: '4', label: <a href="#portfolio">{t('says_a_lot')}</a> },
+        { key: '3', label: <a href="#portfolio">{t('says_a_lot')}</a> },
+        { key: '4', label: <a href="#about-us">{t('about_us')}</a> },
         { key: '5', label: (
             <Dropdown overlay={languageMenu} className="language-switch">
                 <Button>

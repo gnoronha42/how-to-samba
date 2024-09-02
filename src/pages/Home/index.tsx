@@ -56,7 +56,7 @@ const Home = () => {
             <section id="why-we-do">
                 <h2>{t('why_we_do')}</h2>
                 <p>{t('your_manifesto_here')}</p>
-                <Link to="/" className="cta-button">{t('join_us')}</Link>
+                <Link to="/new-members" className="cta-button">{t('join_us')}</Link>
             </section>
 
             <section id="things-we-do">
@@ -68,13 +68,13 @@ const Home = () => {
             <section id="portfolio">
                 <h2>{t('says_a_lot')}</h2>
                 <p>{t('portfolio_description')}</p>
-                <Link to="/" className="cta-button">{t('portfolio')}</Link>
+                <Link to="/portfolio" className="cta-button">{t('portfolio')}</Link>
             </section>
 
             <section id="about-us">
                 <h2>{t('about_us')}</h2>
                 <p>{t('about_us_description')}</p>
-                <Link to="/newMembers" className="cta-button">{t('follow_us')}</Link>
+                <Link to="/" className="cta-button">{t('follow_us')}</Link>
                 <div className="social-icons">
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                         <FaInstagram size={30} />

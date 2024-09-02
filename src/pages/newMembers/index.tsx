@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment';
 import './style.css';
 import { useBackgroundImage } from '../../hooks/backgroundImage';
+import NavBar from '../../components/navBar';
 
 const NewMembersForm: React.FC = () => {
   const { t } = useTranslation();
@@ -71,6 +72,8 @@ const NewMembersForm: React.FC = () => {
 
   return (
     <div className="page-container" style={{backgroundImage: `url(${backgroundImage})`}}>
+            <NavBar />
+     
       <div className="content-container">
         <div className="form-wrapper">
           <h1 className="title">How to Samba ? </h1>
@@ -85,7 +88,7 @@ const NewMembersForm: React.FC = () => {
             layout="vertical"
           >
              <p style={{ fontSize: '20px', fontStyle: 'italic', marginBottom: '5px',color:"white" }}>
-            share your email to know more
+            Share your email to know more
           </p>
             <Form.Item
               name="Email"
@@ -100,7 +103,7 @@ const NewMembersForm: React.FC = () => {
              <button className="losango"  type='submit'  onClick={()=>{
               onFinish(form.getFieldsValue())
              }} data-text={t('register')}>
-             <MailOutlined style={{fontSize:"30px",rotate:"45deg",margin:"5px"}}  />
+             <MailOutlined style={{fontSize:"20px",rotate:"45deg",margin:"5px"}}  />
               </button>
             </Form.Item>
           </Form>
