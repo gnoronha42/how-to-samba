@@ -53,7 +53,11 @@ const Home: React.FC = () => {
 
                 <p className="contact-email">hello2samba@gmail.com</p>
             </section>
+
+
+   
         </div>
+        
     );
 }
 

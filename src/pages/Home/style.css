@@ -8,8 +8,7 @@ html {
     background-position: center; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-
-    width: 100%;
+    scroll-behavior: smooth;
     min-height: 100vh;
 }
 
@@ -221,7 +220,7 @@ html {
 
 section {
     padding: 50px 20px;
-    margin: 20px auto;
+    margin: 10px auto;
     max-width: 900px;
     background-color: rgba(221, 215, 215, 0.521); 
     border-radius: 8px; 
@@ -230,6 +229,11 @@ section {
     text-align: left; 
    
     
+}
+
+
+section:last-child {
+    margin-bottom: 0px;
 }
 
 
