@@ -24,10 +24,10 @@ const NavBar: React.FC = () => {
     );
 
     const items = [
-        { key: '1', label: <a href="#why-we-do">{t('why_we_do')}</a> },
-        { key: '2', label: <a href="#things-we-do">{t('the_things_we_do')}</a> },
-        { key: '3', label: <a href="#portfolio">{t('says_a_lot')}</a> },
-        { key: '4', label: <a href="#about-us">{t('about_us')}</a> },
+        { key: '1', label: <Link  to="/" onClick={() => document.getElementById('why-we-do')?.scrollIntoView({ behavior: 'smooth' })}>{t('why_we_do')}</Link> },
+        { key: '2', label: <Link  to="/" onClick={() => document.getElementById('things-we-do')?.scrollIntoView({ behavior: 'smooth' })}>{t('the_things_we_do')}</Link> },
+        { key: '3', label: <Link  to="/"  onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}>{t('says_a_lot')}</Link> },
+        { key: '4', label: <Link to="/" onClick={() => document.getElementById('about-us')?.scrollIntoView({ behavior: 'smooth' })}>{t('about_us')}</Link> },
         { key: '5', label: (
             <Dropdown overlay={languageMenu} className="language-switch">
                 <Button>

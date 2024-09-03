@@ -1,53 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Menu, Dropdown, Button } from 'antd';
-import { participants } from './mockData';
+import React  from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaFlagUsa, FaFlag, FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import {  FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import NavBar from '../../components/navBar';
 import './style.css';
-import {
-    IMG_6066,
-    IMG_6114,
-    IMG_6115,
-    IMG_6133,
-    IMG_6157,
-    IMG_6192,
-    IMG_6193,
-    IMG_6219,
-    IMG_6334,
-    IMG_6435,
-    IMG_6436,
-    IMG_6457,
-    IMG_6624,
-    IMG_6646,
-    IMG_6649,
-} from '../../assets/';
 import { Link } from 'react-router-dom';
+import { useBackgroundImage } from '../../hooks/backgroundImage';
 
-const Home = () => {
+const Home: React.FC = () => {
     const { t, i18n } = useTranslation();
-    const images = [
-        IMG_6066,
-        IMG_6114,
-        IMG_6115,
-        IMG_6133,
-        IMG_6157,
-        IMG_6192,
-        IMG_6193,
-        IMG_6219,
-        IMG_6334,
-        IMG_6435,
-        IMG_6436,
-        IMG_6457,
-        IMG_6624,
-        IMG_6646,
-        IMG_6649,
-    ];
-    const [backgroundImage, setBackgroundImage] = useState(images[0]);
-    useEffect(() => {
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-        setBackgroundImage(randomImage);
-    }, []);
+    const {backgroundImage} = useBackgroundImage()
 
     return (
         <div className="home" style={{ backgroundImage: `url(${backgroundImage})` }}>

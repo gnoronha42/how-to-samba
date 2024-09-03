@@ -1,7 +1,7 @@
 import React from 'react';
 import { useBackgroundImage } from '../../hooks/backgroundImage';
 import NavBar from '../../components/navBar';
-import { participants } from '../Home/mockData';
+import { participants } from '../../utils/mockData';
 
 const Portfolio: React.FC = () => {
  const { backgroundImage } = useBackgroundImage();

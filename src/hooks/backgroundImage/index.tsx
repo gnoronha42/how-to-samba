@@ -42,7 +42,7 @@ export const useBackgroundImage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setBackgroundIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
-    }, 5000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);

@@ -1,9 +1,5 @@
-import maria from '../../assets/maria-foto.png';
-import mari from '../../assets/mari-foto.png';
-import gabriel from '../../assets/gabriel-foto.png';
-import caio from '../../assets/caio-foto.png';
-import gisele from '../../assets/gisele-foto.png';
-import cris from '../../assets/cris-foto.png';
+import { maria, mari, gabriel, caio, gisele, cris } from "../assets";
+
 
 export const participants = [
     {
